@@ -103,6 +103,7 @@
   align-items: center;
   padding: .75rem;
   justify-content: space-between;
+  border-radius: .5rem;
 
   &__content {
     display: flex;

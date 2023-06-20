@@ -1,11 +1,13 @@
 <template>
+
   <div class="container">
-    <h1>home</h1>
+    <AppFeatured />
   </div>
 </template>
 
 <script>
-export default {}
+import AppFeatured from '@/components/AppFeatured.vue'
+export default { components: { AppFeatured } }
 </script>
 
 <style lang="scss" scoped>
