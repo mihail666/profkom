@@ -2,20 +2,22 @@
   <section class="footer">
     <div class="footer__container container grid">
       <div class="footer__content">
-        <router-link to="/">
-            <img class="logo footer__logo" src="@/assets/icons/logo.png" alt="">
-        </router-link>
-      </div>
-      <div class="header__content">
+        <div class="footer__content-group">
           <router-link to="/">
-            <p class="header-subtitle">Общероссийский Профсоюз образования</p>
-            <h1 class="Header-title">Оренбургская областная организация</h1>
+            <img class="logo footer__logo" src="@/assets/icons/logo.png" alt="">
           </router-link>
-          <p class="footer__description">
-          Lorem ipsum dolor sit amet. <br>
-          Lorem ipsum dolor sit. <br>
-          Lorem, ipsum dolor.
-        </p>
+          <div>
+            <router-link to="/">
+              <p class="subtitle">Общероссийский Профсоюз образования</p>
+              <h2 class="footer__logo-text">Оренбургская областная организация</h2>
+            </router-link>
+            <p class="footer__description">
+              Lorem ipsum dolor sit amet. <br>
+              Lorem ipsum dolor sit. <br>
+              Lorem, ipsum dolor.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="footer__content">
@@ -44,7 +46,7 @@
 
       <div class="footer__content">
         <h3 class="footer__title">
-          Follow us
+          Наши контакты
         </h3>
 
         <ul class="footer__social">
@@ -54,7 +56,7 @@
               target="_blank" rel="noopener"
               class="footer__social-link"
             >
-            <i class="material-icons">close</i>
+            <img src="../assets/icons/telegram.png" alt="">
             </a>
           </li>
           <li>
@@ -64,17 +66,7 @@
               rel="noopener"
               class="footer__social-link"
             >
-            <i class="material-icons">close</i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/mihail666"
-              target="_blank"
-              rel="noopener"
-              class="footer__social-link"
-            >
-            <i class="material-icons">close</i>
+            <img src="../assets/icons/email.png" alt="">
             </a>
           </li>
           <li>
@@ -84,7 +76,17 @@
               rel="noopener"
               class="footer__social-link"
             >
-            <i class="material-icons">close</i>
+            <img src="../assets/icons/whatsapp.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=79877933061"
+              target="_blank"
+              rel="noopener"
+              class="footer__social-link"
+            >
+            <img src="../assets/icons/odnoklassniki.png" alt="">
             </a>
           </li>
         </ul>
@@ -105,23 +107,26 @@
 .footer{
   position: relative;
   overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
   &__container {
     row-gap: 2.5rem;
     position: relative;
   }
+  &__content {}
+  &__content-group {
+    display: flex;
+  }
   &__logo {
     transition: .3s;
-    img {
-      font-size: 1.5rem;
-      padding: 0 1rem;
-      align-items: center;
-      column-gap: .25rem;
-      margin-bottom: 1.25rem;
-    }
-
-    &:hover {
-      color: $first-color;
-    }
+    max-width: 100px !important;
+    padding-right: 1rem;
+    img {}
+  }
+  &__logo-text {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   &__title {
     font-size: $h3-font-size;
@@ -138,6 +143,9 @@
   &__social-link {
     color: $text-color;
     transition: .3s;
+    img {
+      width: 30px;
+    }
   }
   &__link:hover,
   &__social-link:hover {
@@ -151,6 +159,8 @@
     font-size: 1.25rem;
   }
   &__copy {
+    margin: 0 auto;
+    max-width: 900px;
     display: block;
     margin-top: 4.5rem;
     text-align: center;

@@ -1,3 +1,5 @@
+@media (min-width: 560px) {
+}
 @media (min-width: 780px) {
   .nav {
     height: 3rem;
@@ -7,7 +9,6 @@
   }
   .nav__list {
     flex-direction: row;
-    column-gap: 2rem;
     padding-top: 0;
   }
   .nav__link {
@@ -24,7 +25,7 @@
     margin-right: auto;
   }
   .footer__container {
-    grid-template-columns: repeat(5, max-content);
+    grid-template-columns: repeat(4, max-content);
     justify-content: space-between;
   }
   .footer__logo {

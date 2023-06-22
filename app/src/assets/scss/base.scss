@@ -17,10 +17,9 @@ body {
 
 h1,
 h2,
-h3,
-p {
+h3 {
   color: &black-color;
-  font-weight: $font-semi-bold;
+  font-weight: $font-medium;
 }
 
 ul {

@@ -8,23 +8,24 @@ $first-color-hover: #01a8db;
 $card-color: #D3EAF5;
 $text-color: #004E74;
 $text-color-light: #015a86;
-$body-color: #F3F3F3;
+$body-color: #eeeeee;
 $white-color: #fff;
 $black-color: #000;
+$grey-color: #9e9e9e;
 
 
 /* Font and typography */
 /*.5rem = 8px | 1rem = 16px ...*/
 $body-font: sans-serif;
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.25rem;
+$h1-font-size: 2rem;
+$h2-font-size: 1.5rem;
 $h3-font-size: 1rem;
 $normal-font-size: .938rem;
 $small-font-size: .813rem;
 $smaller-font-size: .75rem;
 
 /* Font weight */
-$font-medium: 700;
+$font-medium: 600;
 $font-semi-bold: 800;
 
 /* z index */

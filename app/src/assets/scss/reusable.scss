@@ -1,5 +1,9 @@
+.main-container {
+  padding: 0 1rem;
+}
+
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
 }
@@ -16,8 +20,22 @@
 
 .title {
   font-size: $h1-font-size;
-  text-align: center;
-  margin-bottom: 2.5rem;
+  text-align: left;
+  margin: .25rem 0;
+  margin-bottom: .5rem;
+}
+
+.text {
+  font-size: $normal-font-size;
+  text-align: left;
+  margin-bottom: .5rem;
+}
+
+.subtitle {
+  font-size: $h3-font-size;
+  text-align: left;
+  margin: .25rem 0;
+  color: $grey-color;
 }
 
 .main {
@@ -33,5 +51,38 @@
 
   &:hover {
     transform: scale(1.08);
+  }
+}
+
+.border-left {
+  border-left: 1rem solid $first-color-alt;
+  border-radius: .5rem;
+}
+.border-top {
+  border-top: 1rem solid $first-color-alt;
+  border-radius: .5rem;
+}
+
+.date {
+  padding: 1rem;
+}
+
+.card {
+  transition: .3s;
+
+  &__content {
+    width: 100%;
+    max-width: 370px;
+    border: 1.5px solid $black-color;
+    border-radius: .5rem;
+  }
+
+  &-bottom {
+    padding: 1rem;
+  }
+
+  &:hover {
+    box-shadow: 0 10px 10px $grey-color;
+    border-radius: .5rem;
   }
 }

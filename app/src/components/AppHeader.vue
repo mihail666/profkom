@@ -1,8 +1,8 @@
 <template>
-  <div class="grid">
+  <div class="grid container">
 
     <section class="header">
-      <header class="header__container container grid">
+      <header class="header__container container">
         <div class="header__content">
           <router-link to="/">
             <img class="logo" src="@/assets/icons/logo.png" alt="">
@@ -10,8 +10,8 @@
         </div>
         <div class="header__content">
           <router-link to="/">
-            <p class="header-subtitle">Общероссийский Профсоюз образования</p>
-            <h1 class="Header-title">Оренбургская областная организация</h1>
+            <h2 class="header-subtitle subtitle">Общероссийский Профсоюз образования</h2>
+            <h1 class="title">Оренбургская областная организация</h1>
           </router-link>
         </div>
       </header>
@@ -82,20 +82,19 @@
     grid-template-columns: repeat(2, max-content);
     align-items: center;
     justify-content: left;
+    display: grid;
+    column-gap: 1rem;
   }
   &-title {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 24px;
+    font-size: 2px;
     line-height: 1;
     font-weight: bold;
     color: #01a7fa;
-    text-transform: uppercase;
-    width: 100%;
-    max-height: 48px;
-    overflow: hidden;
   }
 }
 // .header__content {}
+
 .nav {
   background: $first-color;
   height: 3rem;
@@ -115,7 +114,7 @@
     display: inline-flex;
     i {
       font-size: 2.25rem;
-      padding-right: 1.5rem;
+      padding-right: 1rem;
       &:hover {
         color: $first-color-hover;
     }
@@ -128,10 +127,7 @@
 
   &__list {
     display: flex;
-    flex-direction: column;
     text-align: center;
-    row-gap: 2rem;
-    padding-top: 9rem;
   }
 
   &__link {
@@ -140,12 +136,17 @@
     font-weight: $font-medium;
     transition: .3s;
     color: $white-color;
-    &:hover {
-      color: $first-color-hover;
-    }
 
     &:active{
       color: $first-color-alt;
+      background: $first-color-alt;
+    }
+  }
+  &__item {
+    padding: .9rem;
+    transition: .3s;
+    &:hover {
+      background: $first-color-hover;
     }
   }
 
@@ -161,7 +162,7 @@
 
 @media screen and (max-width: 780px) {
   .nav__menu {
-    position: fixed;
+    position: relative;
     background: hsl(0, 0%, 100%, .1);
     top: 0;
     right: -100%;
