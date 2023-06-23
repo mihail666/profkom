@@ -15,31 +15,30 @@ const showMenu = () => {
     })
   }
   /* REMOVE MENU MOBILE */
-  const navLink = document.querySelectorAll('.nav__link')
+  const navLink = document.querySelectorAll('.nav__item')
   const linkAction = () => {
     const navMenu = document.getElementById('nav-menu')
     navMenu.classList.remove('show-menu')
   }
   navLink.forEach(n => n.addEventListener('click', linkAction))
   /* CHANGE BACKGROUND HEADER */
-  const scrollHeader = () => {
-    const header = document.getElementById('header')
-    scrollY >= 50
-      ? header.classList.add('scroll-header')
-      : header.classList.remove('scroll-header')
-  }
-  window.addEventListener('scroll', scrollHeader)
+  // const scrollHeader = () => {
+  //   const header = document.getElementById('header')
+  //   scrollY >= 50
+  //     ? header.classList.add('scroll-header')
+  //     : header.classList.remove('scroll-header')
+  // }
+  // window.addEventListener('scroll', scrollHeader)
 }
 
-const scrollUp = () => {
-  const scrollUp = document.getElementById('scroll-up')
-  scrollY >= 350
-    ? scrollUp.classList.add('show-scroll')
-    : scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+// const scrollUp = () => {
+//   const scrollUp = document.getElementById('scroll-up')
+//   scrollY >= 350
+//     ? scrollUp.classList.add('show-scroll')
+//     : scrollUp.classList.remove('show-scroll')
+// }
+// window.addEventListener('scroll', scrollUp)
 
 export {
-  showMenu,
-  scrollUp
+  showMenu
 }

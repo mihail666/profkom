@@ -1,9 +1,10 @@
-$header-height: 3.5 rem;
+$header-height: 4rem;
 /* Colors */
 
 /*Color mode HSL(hue, saturation, lightness)*/
 $first-color: #004E74;
 $first-color-alt: #0079B4;
+$first-color-opacity: #004e757e;
 $first-color-hover: #01a8db;
 $card-color: #D3EAF5;
 $text-color: #004E74;
@@ -31,4 +32,3 @@ $font-semi-bold: 800;
 /* z index */
 $z-tooltip: 10;
 $z-fixed: 100;
-

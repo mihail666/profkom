@@ -2,7 +2,7 @@
   <div class="">
     <AppHeader />
     <section class="section container">
-      <h1>page not font</h1>
+      <h1>page not found</h1>
       <router-view />
     </section>
   </div>

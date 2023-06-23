@@ -87,7 +87,7 @@ export default {
 
     span {
       img {
-        width: 60px;
+        max-width: 30px;
         filter: invert(1);
         transition: .3s;
         &:hover {

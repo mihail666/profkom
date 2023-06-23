@@ -2,7 +2,7 @@
   <section class="featured" id="featured">
 
     <div class="featured__container">
-      <ul class="featured__buttons">
+      <ul class="featured__buttons featured__content">
         <li>
           <a href="https://lk.eseur.ru" class="buttons featured__item">
             <i class="material-icons" style="color: white">school</i>Год педагога и наставника
@@ -42,22 +42,19 @@ export default {
 .featured {
   &__container {
     padding-top: .5rem;
+    padding-left: 1rem;
   }
 
   &__buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   &__item {
     display: flex;
-    height: 3rem;
+    height: 4.5rem;
     border: none;
     outline: none;
-    padding: 1rem;
+    padding: 2rem;
     justify-content: center;
     align-items: center;
     border-radius: .5rem;
@@ -91,9 +88,9 @@ export default {
   &__content {
     grid-template-columns: 228px;
     justify-content: center;
-    gap: 2.5rem;
+    gap: .5rem;
     display: grid;
-    grid-template-columns: repeat(1, max-content);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   &__card {
@@ -124,6 +121,16 @@ export default {
   &__img {
     margin: 1.5rem 0;
     transition: .3s;
+  }
+}
+@media (min-width: 576px) {
+  .featured__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1040px) {
+  .featured__content {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 </style>

@@ -2,12 +2,12 @@
   <section class="about">
     <div class="about__container">
       <div class="about__content">
-        <h1 class="title">О нас</h1>
-        <h1 class="text">Общероссийский Профсоюз образования</h1>
-              <div class="about__buttons-group">
-                <button class="text">Вступить в Профсоюз</button>
-                <button class="text">Подробнее</button>
-              </div>
+        <h1 class="title group-text">О нас</h1>
+        <h1 class="text group-text">Общероссийский Профсоюз образования</h1>
+        <div class="about__buttons-group">
+          <button class="text">Вступить в Профсоюз</button>
+          <button class="text">Подробнее</button>
+        </div>
         <div class="about__items">
           <div class="about__item">
             <span>73 508</span>
@@ -67,7 +67,9 @@ export default {
     color: $white-color;
   }
   &__content {
+    width: 100%;
     padding: 4rem;
+    margin: 0 auto;
   }
   &__items {
     width: 100%;
@@ -81,8 +83,9 @@ export default {
     width: 100%;
     max-width: 200px;
     text-align: center;
+    padding: .5rem;
     p {
-      text-align: justify;
+      text-align: center;
       margin-top: .3rem;
     }
     span {
@@ -94,11 +97,13 @@ export default {
   &__buttons-group {
     display: flex;
     flex-wrap: wrap;
-    white-space: pre;
     white-space: nowrap;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
     button {
       padding: .5rem 1rem;
-      margin: .5rem 1rem 2rem 0;
+      margin:.5rem;
       background: none;
       border: 2px solid $white-color;
       color: $white-color;
@@ -110,6 +115,9 @@ export default {
       }
     }
   }
+}
+.group-text {
+  text-align: center;
 }
 
 </style>

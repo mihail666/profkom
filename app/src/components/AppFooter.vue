@@ -1,25 +1,17 @@
 <template>
   <section class="footer">
-    <div class="footer__container container grid">
-      <div class="footer__content">
-        <div class="footer__content-group">
+    <div class="footer__content-group container">
+        <router-link to="/">
+          <img class="logo footer__logo" src="@/assets/icons/logo.png" alt="">
+        </router-link>
+        <div>
           <router-link to="/">
-            <img class="logo footer__logo" src="@/assets/icons/logo.png" alt="">
+            <p class="subtitle">Общероссийский Профсоюз образования</p>
+            <h2 class="footer__logo-text">Оренбургская областная организация</h2>
           </router-link>
-          <div>
-            <router-link to="/">
-              <p class="subtitle">Общероссийский Профсоюз образования</p>
-              <h2 class="footer__logo-text">Оренбургская областная организация</h2>
-            </router-link>
-            <p class="footer__description">
-              Lorem ipsum dolor sit amet. <br>
-              Lorem ipsum dolor sit. <br>
-              Lorem, ipsum dolor.
-            </p>
-          </div>
         </div>
       </div>
-
+    <div class="footer__container container">
       <div class="footer__content">
         <h3 class="footer__title">
           Company
@@ -108,20 +100,27 @@
   position: relative;
   overflow: hidden;
   max-width: 1200px;
+  padding: 1rem;
   margin: 0 auto;
-  padding: 1rem 2rem;
   &__container {
     row-gap: 2.5rem;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-  &__content {}
+  &__content {
+  }
   &__content-group {
     display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
   }
   &__logo {
     transition: .3s;
-    max-width: 100px !important;
-    padding-right: 1rem;
+    max-width: 100px;
     img {}
   }
   &__logo-text {
