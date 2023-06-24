@@ -42,7 +42,6 @@ export default {
 .featured {
   &__container {
     padding-top: .5rem;
-    padding-left: 1rem;
   }
 
   &__buttons {
