@@ -5,22 +5,22 @@
       <ul class="featured__buttons featured__content">
         <li>
           <a href="https://lk.eseur.ru" class="buttons featured__item">
-            <i class="material-icons" style="color: white">school</i>Год педагога и наставника
+            <i class="material-icons" style="color: white">school</i><p>Год педагога и наставника</p>
           </a>
         </li>
         <li>
           <a href="https://lk.eseur.ru" class="buttons featured__item">
-            <i class="material-icons" style="color: white">login</i>Вступить в Профсоюз!
+            <i class="material-icons" style="color: white">login</i><p>Вступить в Профсоюз!</p>
           </a>
         </li>
         <li>
           <a href="https://lk.eseur.ru" class="buttons featured__item">
-            <i class="material-icons" style="color: white">feed</i>Текущая ситуация. Задачи и действия Профсоюза
+            <i class="material-icons" style="color: white">feed</i><p>Задачи и действия</p>
           </a>
         </li>
         <li>
           <a href="https://lk.eseur.ru" class="buttons featured__item">
-            <i class="material-icons" style="color: white">send</i>Наши контакты
+            <i class="material-icons" style="color: white">send</i><p>Наши контакты</p>
           </a>
         </li>
 
@@ -42,6 +42,7 @@ export default {
 .featured {
   &__container {
     padding-top: .5rem;
+    padding-left: 1rem;
   }
 
   &__buttons {
@@ -53,8 +54,8 @@ export default {
     height: 4.5rem;
     border: none;
     outline: none;
-    padding: 2rem;
-    justify-content: center;
+    padding: 1rem;
+    justify-content: left;
     align-items: center;
     border-radius: .5rem;
     background-color: $first-color-alt;
@@ -64,24 +65,29 @@ export default {
     transition: .3s;
 
     i {
-      font-size: 2rem;
+      font-size: 1.5rem;
       padding-right: .5rem;
     }
 
     span,
-    img {
+    i,
+    p {
       opacity: .5;
       transition: .3s;
+      font-weight: $font-medium;
     }
-  }
-
-  &__item:hover {
-    background-color: $first-color;
-  }
-
-  &__item:hover span,
-  &__item:hover img {
-    opacity: 1;
+    &:hover {
+      background-color: $first-color;
+      span, i, p {
+        opacity: 1;
+      }
+      i {
+        transform: scale(1.4);
+      }
+      p {
+        transform: translateX(.5rem);
+      }
+    }
   }
 
   &__content {
@@ -122,11 +128,13 @@ export default {
     transition: .3s;
   }
 }
+
 @media (min-width: 576px) {
   .featured__content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (min-width: 1040px) {
   .featured__content {
     grid-template-columns: repeat(4, 1fr);

@@ -1,18 +1,18 @@
 <template>
   <header class="header" id="header">
     <div class="header__group container">
-        <div class="header__el">
-          <router-link to="/">
-            <img class="logo" src="@/assets/icons/logo.png" alt="">
-          </router-link>
-        </div>
-        <div class="header__el">
-          <router-link to="/">
-            <h2 class="header-subtitle subtitle">Общероссийский Профсоюз образования</h2>
-            <h1 class="title">Оренбургская областная организация</h1>
-          </router-link>
-        </div>
+      <div class="header__el">
+        <router-link to="/">
+          <img class="logo" src="@/assets/icons/logo.png" alt="">
+        </router-link>
       </div>
+      <div class="header__el">
+        <router-link to="/">
+          <h2 class="header-subtitle subtitle">Общероссийский Профсоюз образования</h2>
+          <h1 class="title">Оренбургская областная организация</h1>
+        </router-link>
+      </div>
+    </div>
     <nav class="nav container">
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
@@ -48,10 +48,11 @@
       <!-- toggle button -->
       <div class="nav__toggle" id="nav-toggle">
         <i class="material-icons">menu</i>
+        <p class="">Разделы сайта</p>
       </div>
-      <div class="nav__item nav__search">
-          <i class="material-icons" style="color: white">travel_explore</i>
-        </div>
+      <div class="nav__search">
+        <i class="material-icons" style="color: white">travel_explore</i>
+      </div>
     </nav>
   </header>
 </template>
@@ -67,11 +68,13 @@ onMounted(() => {
 
 <style lang="scss">
 @import '@/assets/scss/variables.scss';
+
 .header {
   width: 100%;
   background-color: transparent;
   position: relative;
   z-index: $z-fixed;
+
   &__group {
     display: flex;
     flex-wrap: nowrap;
@@ -81,6 +84,7 @@ onMounted(() => {
     margin-bottom: 1rem;
   }
 }
+
 .nav {
   height: $header-height;
   display: flex;
@@ -89,11 +93,47 @@ onMounted(() => {
   align-items: center;
   background: $first-color;
   border-radius: .5rem;
+  box-sizing: border-box;
+
+  &__search {
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
 
   &__logo,
   &__toggle {
     color: $white-color;
     display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+      font-size: $h3-font-size;
+      text-transform: uppercase;
+      font-weight: $font-medium;
+      font-size: $h3-font-size;
+      padding-left: .5rem;
+      transition: .3s;
+      z-index: 1;
+    }
+    i {
+      font-size: 2rem;
+      font-weight: $font-medium;
+    }
+
+    &:hover{
+      i {
+        color: $first-color-hover;
+      }
+      p {
+        transform: translateX(.5rem);
+      }
+    }
+
   }
 
   &__logo {
@@ -111,90 +151,8 @@ onMounted(() => {
     }
   }
 }
-// .header {
-//   max-height: 3.375rem;
-//   padding: 1rem 0;
-//   position: relative;
-//   &__container {
-//     position: relative;
-//     grid-template-columns: repeat(2, max-content);
-//     align-items: center;
-//     justify-content: left;
-//     display: grid;
-//     column-gap: 1rem;
-//   }
-//   &-title {
-//     font-family: 'Roboto Condensed', sans-serif;
-//     font-size: 2px;
-//     line-height: 1;
-//     font-weight: bold;
-//     color: #01a7fa;
-//   }
-// }
-// // .header__content {}
-// .nav-header {
-//   width: 100%;
-//   max-width: 1200px;
-//   background-color: transparent;
-//   position: relative;
-//   top: 0;
-//   z-index: $z-fixed;
-//   box-sizing: border-box;
-// }
-// .nav {
-//   background: $first-color;
-//   height: 3rem;
-//   display: flex;
-//   align-items: center;
-//   padding: .75rem;
-//   justify-content: space-between;
-//   border-radius: .5rem;
 
-//   &__content {
-//     display: flex;
-//     align-items: center;
-//   }
-
-//   &__toggle {
-//     color: $white-color;
-//     display: inline-flex;
-//     i {
-//       font-size: 2.25rem;
-//       padding-right: 1rem;
-//       &:hover {
-//         color: $first-color-hover;
-//     }
-
-//       &:active{
-//         color: $first-color-alt;
-//       }
-//     }
-//   }
-
-//   &__link {
-//     text-transform: uppercase;
-//     font-size: $h1-font-size;
-//     font-weight: $font-medium;
-//     transition: .3s;
-//     color: $white-color;
-//     white-space: pre;
-//     white-space: nowrap;
-
-//     &:active{
-//       color: $first-color-alt;
-//       background: $first-color-alt;
-//     }
-//   }
-//   &__item {
-//     padding: .9rem;
-//     transition: .3s;
-//     &:hover {
-//       background: $first-color-hover;
-//     }
-//   }
-// }
-
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 931px) {
   .nav__menu {
     position: fixed;
     background: $first-color-opacity;
@@ -208,41 +166,66 @@ onMounted(() => {
     padding: 5rem;
   }
 }
+
 .nav__list {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    row-gap: .3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  row-gap: .2rem;
+  list-style: inside;
 }
 
 .nav__link {
   text-transform: uppercase;
-    font-size: $h3-font-size;
-    font-weight: $font-medium;
-    transition: .3s;
-    color: $white-color;
-    padding: 0 1rem;
+  font-size: $h3-font-size;
+  font-weight: $font-medium;
+  transition: .3s;
+  color: $white-color;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 
-    &:active{
-      color: $first-color-alt;
-    }
-}
-.nav__item {
-    padding: 1.4rem .2rem;
-    border-radius: .5rem;
-    transition: .3s;
-    &:hover {
-      background: $first-color-hover;
-    }
-}
-.nav__close {
-    font-size: 2rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
+  &:hover {
+    color: $first-color-hover;
+    transform: translateX(0.5rem);
   }
+
+  &:active {
+    color: $first-color-alt;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fffefe;
+    border-radius: 50%;
+    left: -20px;
+    transition: .3s;
+  }
+}
+
+.nav__item {
+  position: relative;
+  height: 3rem;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: .3s;
+}
+
+.nav__close {
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
 .show-menu {
+  z-index: 2;
   right: 0%;
 }
 
@@ -250,5 +233,4 @@ onMounted(() => {
 //   border-radius: 0 0 1rem 1rem;
 //   background-color: $body-color;
 //   box-shadow: 0 2px 4px hsla(0, 0, 1%, 1);
-// }
-</style>
+// }</style>

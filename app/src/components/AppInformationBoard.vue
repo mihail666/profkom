@@ -1,10 +1,10 @@
 <template>
   <section class="infoBoard">
-    <div class="infoBoard__container border-left">
-      <div class="card" v-for="n in 6" :key="n">
+    <div class="infoBoard__container border-left card">
+      <div class="" v-for="n in 6" :key="n">
         <div class="card__content">
           <h2 class="date subtitle">11.11.2023</h2>
-          <img class="card-img" src="../assets/images/test.jpg" alt="">
+          <img class="card-img" src="../assets/images/test2.jpg" alt="">
           <div class="card-bottom">
             <h2 class="subtitle">Новости</h2>
             <h1 class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -25,19 +25,13 @@ export default {}
 
 <style lang="scss">
 @import '@/assets/scss/variables.scss';
+
 .infoBoard {
   position: relative;
   padding-bottom: 2rem;
+
   &__container {
-    width: 100%;
-    padding: 1rem;
     border-radius: .5rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     background-color: $white-color;
-    gap: 1rem;
   }
-}
-</style>
+}</style>

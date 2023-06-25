@@ -2,30 +2,28 @@
   <section class="contacts">
     <div class="contacts__container">
       <div class="contacts__content">
-        <h1 class="title">Наши контакты</h1>
-        <h1 class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus architecto aliquid</h1>
+        <h1 class="title text-center">Наши контакты</h1>
+        <h1 class="text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus architecto aliquid</h1>
         <div class="contacts__items">
           <a href="#" class="contacts__item">
             <span><img src="../assets/icons/email.png" alt=""></span>
-            <p>
-              Отправить письмо на почту
-            </p>
+            <p>Отправить письмо на почту</p>
           </a>
           <a href="#" class="contacts__item">
             <span><img src="../assets/icons/vk.png" alt=""></span>
-            Подписаться на гуппу в вконтакте
+            <p>Подписаться на гуппу в вконтакте</p>
           </a>
           <a href="#" class="contacts__item">
             <span><img src="../assets/icons/telegram.png" alt=""></span>
-            Подписаться на канал в Телеграмме
+            <p>Подписаться на канал в Телеграмме</p>
           </a>
           <a href="#" class="contacts__item">
             <span><img src="../assets/icons/whatsapp.png" alt=""></span>
-            Связаться через whatsapp
+            <p>Связаться через whatsapp</p>
           </a>
           <a href="#" class="contacts__item">
             <span><img src="../assets/icons/odnoklassniki.png" alt=""></span>
-            Подписаться на гуппу в одноклассниках
+            <p>Подписаться на гуппу в одноклассниках</p>
           </a>
         </div>
       </div>
@@ -46,7 +44,6 @@ export default {
   padding-bottom: 2rem;
 
   &__container {
-    width: 100%;
     border-radius: .5rem;
     display: flex;
     flex-direction: row;
@@ -80,20 +77,28 @@ export default {
     justify-content: center;
     row-gap: .5rem;
     column-gap: .6rem;
-    p {
-      text-align: justify;
-      margin-top: .3rem;
-    }
+    transition: .3s;
 
-    span {
-      img {
-        max-width: 30px;
-        filter: invert(1);
-        transition: .3s;
-        &:hover {
-          transform: scale(1.3);
-        }
+    p {
+      text-align: left;
+      margin-top: .3rem;
+      transition: .3s;
+    }
+    &:hover {
+      span img {
+        transform: scale(1.4);
       }
+      p {
+        transform: translateX(.5rem);
+      }
+    }
+  }
+
+  span {
+    img {
+      max-width: 30px;
+      filter: invert(1);
+      transition: .3s;
     }
   }
 }</style>
