@@ -114,13 +114,12 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 2rem;
-    padding-top: 1rem;
     margin-bottom: 1rem;
   }
   &__logo {
     transition: .3s;
     max-width: 100px;
+    padding-right: 1rem;
     img {}
   }
   &__logo-text {
@@ -153,6 +152,9 @@
   &__social {
     display: flex;
     column-gap: 1.5rem;
+    img {
+      max-width: 30px;
+    }
   }
   &__social-link {
     font-size: 1.25rem;

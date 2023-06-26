@@ -42,7 +42,6 @@ export default {
 .featured {
   &__container {
     padding-top: .5rem;
-    padding-left: 1rem;
   }
 
   &__buttons {
@@ -72,15 +71,11 @@ export default {
     span,
     i,
     p {
-      opacity: .5;
       transition: .3s;
       font-weight: $font-medium;
     }
     &:hover {
       background-color: $first-color;
-      span, i, p {
-        opacity: 1;
-      }
       i {
         transform: scale(1.4);
       }

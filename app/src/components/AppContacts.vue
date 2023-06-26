@@ -63,10 +63,10 @@ export default {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-top: 1rem;
-    row-gap: 1rem;
+    gap: 1.5rem;
   }
 
   &__item {

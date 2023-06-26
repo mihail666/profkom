@@ -8,8 +8,8 @@
       </div>
       <div class="header__el">
         <router-link to="/">
-          <h2 class="header-subtitle subtitle">Общероссийский Профсоюз образования</h2>
-          <h1 class="title">Оренбургская областная организация</h1>
+          <h2 class="header__subtitle subtitle">Общероссийский Профсоюз образования</h2>
+          <h1 class="header__title">Оренбургская областная организация</h1>
         </router-link>
       </div>
     </div>
@@ -79,9 +79,12 @@ onMounted(() => {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     padding-top: 1rem;
     margin-bottom: 1rem;
+  }
+  &__title{
+    font-size: $h3-font-size;
   }
 }
 
@@ -152,7 +155,7 @@ onMounted(() => {
   }
 }
 
-@media screen and (max-width: 931px) {
+@media screen and (max-width: 930px) {
   .nav__menu {
     position: fixed;
     background: $first-color-opacity;
@@ -164,6 +167,9 @@ onMounted(() => {
     transition: .1s;
     color: $white-color;
     padding: 5rem;
+  }
+  .header__subtitle {
+    display: none;
   }
 }
 
@@ -228,7 +234,6 @@ onMounted(() => {
   z-index: 2;
   right: 0%;
 }
-
 // .scroll-header {
 //   border-radius: 0 0 1rem 1rem;
 //   background-color: $body-color;

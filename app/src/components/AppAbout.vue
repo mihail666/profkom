@@ -55,15 +55,10 @@ export default {
 
 .about {
   position: relative;
-  padding-bottom: 2rem;
 
   &__container {
     width: 100%;
     border-radius: .5rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     background: content-box linear-gradient(5deg, $first-color-hover, $first-color);
     gap: 1rem;
     color: $white-color;
@@ -80,7 +75,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
@@ -105,12 +100,12 @@ export default {
   &__buttons-group {
     display: flex;
     flex-wrap: wrap;
-    white-space: nowrap;
     margin-bottom: 1rem;
     align-items: center;
     justify-content: center;
 
     button {
+      width: 100%;
       padding: .5rem 1rem;
       margin: .5rem;
       background: none;
@@ -127,4 +122,11 @@ export default {
   }
 }
 
+@media (min-width: 900px) {
+  .about__buttons-group {
+    flex-wrap: nowrap;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
 </style>
