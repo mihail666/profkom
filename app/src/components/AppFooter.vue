@@ -14,24 +14,24 @@
     <div class="footer__container container">
       <div class="footer__content">
         <h3 class="footer__title">
-          Company
+          Разделы сайта
         </h3>
 
-        <ul class="footer__links" v-for="(n, idx) of 7" :key="n">
+        <ul class="footer__links" v-for="l of menuList" :key="l.id">
           <li>
-            <a href="#" class="footer__link">item {{ idx+1 }}</a>
+            <router-link :to="l.path" class="footer__link">{{ l.title }}</router-link>
           </li>
         </ul>
       </div>
 
       <div class="footer__content">
         <h3 class="footer__title">
-          Information
+          Выжные темы
         </h3>
 
-        <ul class="footer__links" v-for="(n, idx) of 5" :key="n">
+        <ul class="footer__links" v-for="l of menuClients" :key="l.id">
           <li>
-            <a href="#" class="footer__link">item {{ idx+1 }}</a>
+            <router-link :to="l.path" class="footer__link">{{ l.title }}</router-link>
           </li>
         </ul>
       </div>
@@ -48,7 +48,7 @@
               target="_blank" rel="noopener"
               class="footer__social-link"
             >
-            <img src="../assets/icons/telegram.png" alt="">
+              <img src="../assets/icons/telegram.png" alt="">
             </a>
           </li>
           <li>
@@ -88,11 +88,14 @@
       Все права на опубликованные на сайте Общероссийского Профсоюза образования материалы охраняются в соответствии с законодательством Российской Федерации.
       Любое использование материалов допускается только по согласованию с их авторами с
       обязательной активной ссылкой на источник.
-      Политика Общероссийского Профсоюза образования в отношении обработки персональных данных.
-      Администрация сайта не несёт ответственности за содержание веб-сайтов, на которые даны ссылки.
     </span>
   </section>
 </template>
+
+<script setup>
+import { menuList, menuClients } from '@/const/menuLinks'
+
+</script>
 
 <style lang="scss">
 @import '@/assets/scss/variables.scss';
@@ -109,6 +112,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   &__content {
+    width: 300px;
   }
   &__content-group {
     display: flex;
@@ -137,31 +141,36 @@
     // row-gap: .5rem;
     margin: .5rem 0;
   }
-  &__link,
-  &__social-link {
+  &__link{
     color: $text-color;
     transition: .3s;
-    img {
-      width: 30px;
+    padding-bottom: .2rem;
+    border-bottom: 2px solid $body-color;
+
+    &:hover{
+      color: $first-color-hover;
+      margin-left: .3rem;
+      border-bottom: 2px solid $first-color-hover;
     }
-  }
-  &__link:hover,
-  &__social-link:hover {
-    color: $black-color;
   }
   &__social {
     display: flex;
-    column-gap: 1.5rem;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 1rem;
     img {
       max-width: 30px;
+      transition: .3s;
+      &:hover {
+        transform: scale(1.3);
+      }
     }
   }
-  &__social-link {
-    font-size: 1.25rem;
-  }
+  &____social-link {}
   &__copy {
+    padding: 0 1rem;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 700px;
     display: block;
     margin-top: 4.5rem;
     text-align: center;

@@ -1,5 +1,5 @@
 <template>
-  <section class="contacts">
+  <section class="contacts spacer">
     <div class="contacts__container">
       <div class="contacts__content">
         <h1 class="title text-center">Наши контакты</h1>
@@ -41,7 +41,6 @@ export default {
 
 .contacts {
   position: relative;
-  padding-bottom: 2rem;
 
   &__container {
     border-radius: .5rem;

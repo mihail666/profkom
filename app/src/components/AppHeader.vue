@@ -16,7 +16,10 @@
     <nav class="nav container">
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <li class="nav__item">
+          <router-link class="nav__item" :to="l.path" v-for="l in menuList" :key="l.id">
+           <div class="nav__link">{{l.title}}</div>
+          </router-link>
+          <!-- <li class="nav__item">
             <router-link to="/" class="nav__link">Главная</router-link>
           </li>
           <li class="nav__item">
@@ -29,17 +32,14 @@
             <router-link to="/news" class="nav__link">Новости</router-link>
           </li>
           <li class="nav__item">
-            <router-link to="/work" class="nav__link">Деятельность</router-link>
+            <router-link to="/activity" class="nav__link">Деятельность</router-link>
           </li>
           <li class="nav__item">
             <router-link to="/chill" class="nav__link">Отдых</router-link>
           </li>
           <li class="nav__item">
             <router-link to="/documents" class="nav__link">Документы</router-link>
-          </li>
-          <li class="nav__item">
-            <router-link to="/npf" class="nav__link">НПФ</router-link>
-          </li>
+          </li> -->
         </ul>
         <div class="nav__close" id="nav-close">
           <i class="material-icons">close</i>
@@ -60,6 +60,7 @@
 <script setup>
 import { showMenu } from '@/assets/js/animate.js'
 import { onMounted } from 'vue'
+import { menuList } from '@/const/menuLinks'
 
 onMounted(() => {
   showMenu()
@@ -179,25 +180,25 @@ onMounted(() => {
   text-align: left;
   row-gap: .2rem;
   list-style: inside;
+  .router-link-active {
+    background: $first-color-hover;
+  }
 }
 
 .nav__link {
+  height: 2rem;
   text-transform: uppercase;
   font-size: $h3-font-size;
   font-weight: $font-medium;
   transition: .3s;
   color: $white-color;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
 
   &:hover {
     color: $first-color-hover;
     transform: translateX(0.5rem);
-  }
-
-  &:active {
-    color: $first-color-alt;
   }
 
   &::before {
@@ -214,7 +215,7 @@ onMounted(() => {
 
 .nav__item {
   position: relative;
-  height: 3rem;
+  height: 2rem;
   border-radius: .5rem;
   display: flex;
   justify-content: center;
@@ -234,6 +235,7 @@ onMounted(() => {
   z-index: 2;
   right: 0%;
 }
+
 // .scroll-header {
 //   border-radius: 0 0 1rem 1rem;
 //   background-color: $body-color;

@@ -40,10 +40,6 @@ export default {
 @import '@/assets/scss/variables.scss';
 
 .featured {
-  &__container {
-    padding-top: .5rem;
-  }
-
   &__buttons {
     margin-bottom: 1rem;
   }

@@ -1,6 +1,6 @@
 <template>
   <section class="infoBoard">
-    <div class="infoBoard__container border-left card">
+    <div class="page-container border-left card">
       <div class="" v-for="n in 6" :key="n">
         <div class="card__content">
           <h2 class="date subtitle">11.11.2023</h2>
@@ -25,13 +25,7 @@ export default {}
 
 <style lang="scss">
 @import '@/assets/scss/variables.scss';
-
 .infoBoard {
-  position: relative;
-  padding-bottom: 2rem;
-
-  &__container {
-    border-radius: .5rem;
-    background-color: $white-color;
-  }
-}</style>
+  margin-bottom: 2rem;
+}
+</style>

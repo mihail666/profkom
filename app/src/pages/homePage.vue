@@ -1,7 +1,7 @@
 <template>
-
   <div class="container">
     <app-featured />
+    <h1 class="title">Важная информация</h1>
     <app-information-board />
     <app-contacts />
     <app-materials />
