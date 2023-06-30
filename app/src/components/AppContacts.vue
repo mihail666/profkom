@@ -11,11 +11,11 @@
           </a>
           <a href="#" class="contacts__item">
             <span><img src="../assets/icons/vk.png" alt=""></span>
-            <p>Подписаться на гуппу в вконтакте</p>
+            <p>Подписаться на вконтакте</p>
           </a>
           <a href="#" class="contacts__item">
             <span><img src="../assets/icons/telegram.png" alt=""></span>
-            <p>Подписаться на канал в Телеграмме</p>
+            <p>Подписаться на Телеграмм</p>
           </a>
           <a href="#" class="contacts__item">
             <span><img src="../assets/icons/whatsapp.png" alt=""></span>
@@ -23,7 +23,7 @@
           </a>
           <a href="#" class="contacts__item">
             <span><img src="../assets/icons/odnoklassniki.png" alt=""></span>
-            <p>Подписаться на гуппу в одноклассниках</p>
+            <p>Подписаться на одноклассники</p>
           </a>
         </div>
       </div>
