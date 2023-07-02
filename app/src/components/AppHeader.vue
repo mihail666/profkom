@@ -16,30 +16,23 @@
     <nav class="nav container">
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <router-link class="nav__item" :to="l.path" v-for="l in menuList" :key="l.id">
-           <div class="nav__link">{{l.title}}</div>
-          </router-link>
-          <!-- <li class="nav__item">
-            <router-link to="/" class="nav__link">Главная</router-link>
+          <li class="nav__item " v-for="l of menuList" :key="l.id">
+            <div v-if="l.pages.length === 0">
+              <router-link class="" :to="l.path">
+                <div class="nav__link">{{ l.title }}</div>
+              </router-link>
+            </div>
+            <div v-else class="dropdown">
+              <div class="nav__item">
+                <div class="nav__link-title">{{ l.title }}</div>
+              </div>
+              <div class="dropdown-content">
+                <router-link class="" :to="pagesLink.path" v-for="pagesLink in l.pages" :key="pagesLink.id">
+                  <div class="nav__link nav__link-drop">{{ pagesLink.pageTitle }}</div>
+                </router-link>
+              </div>
+            </div>
           </li>
-          <li class="nav__item">
-            <router-link to="/about" class="nav__link">О нас</router-link>
-          </li>
-          <li class="nav__item">
-            <router-link to="/decisions" class="nav__link">Решения</router-link>
-          </li>
-          <li class="nav__item">
-            <router-link to="/news" class="nav__link">Новости</router-link>
-          </li>
-          <li class="nav__item">
-            <router-link to="/activity" class="nav__link">Деятельность</router-link>
-          </li>
-          <li class="nav__item">
-            <router-link to="/chill" class="nav__link">Отдых</router-link>
-          </li>
-          <li class="nav__item">
-            <router-link to="/documents" class="nav__link">Документы</router-link>
-          </li> -->
         </ul>
         <div class="nav__close" id="nav-close">
           <i class="material-icons">close</i>
@@ -84,7 +77,8 @@ onMounted(() => {
     padding-top: 1rem;
     margin-bottom: 1rem;
   }
-  &__title{
+
+  &__title {
     font-size: $h3-font-size;
   }
 }
@@ -124,15 +118,17 @@ onMounted(() => {
       transition: .3s;
       z-index: 1;
     }
+
     i {
       font-size: 2rem;
       font-weight: $font-medium;
     }
 
-    &:hover{
+    &:hover {
       i {
         color: $first-color-hover;
       }
+
       p {
         transform: translateX(.5rem);
       }
@@ -167,8 +163,9 @@ onMounted(() => {
     backdrop-filter: blur(96px);
     transition: .1s;
     color: $white-color;
-    padding: 5rem;
+    padding: 5rem 2rem;
   }
+
   .header__subtitle {
     display: none;
   }
@@ -178,10 +175,35 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   text-align: left;
-  row-gap: .2rem;
+  row-gap: .5rem;
   list-style: inside;
+
   .router-link-active {
     background: $first-color-hover;
+    border-radius: .5rem;
+  }
+}
+
+.nav__link-title {
+  height: 2rem;
+  text-transform: uppercase;
+  font-size: $h3-font-size;
+  font-weight: $font-medium;
+  transition: .3s;
+  color: $white-color;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border: 2px solid $white-color;
+    border-radius: 50%;
+    left: -11px;
+    transition: .3s;
   }
 }
 
@@ -197,7 +219,7 @@ onMounted(() => {
   align-items: center;
 
   &:hover {
-    color: $first-color-hover;
+    color: $black-color;
     transform: translateX(0.5rem);
   }
 
@@ -208,14 +230,14 @@ onMounted(() => {
     height: 10px;
     background: #fffefe;
     border-radius: 50%;
-    left: -20px;
+    left: -10px;
     transition: .3s;
   }
 }
 
 .nav__item {
   position: relative;
-  height: 2rem;
+  // height: 2rem;
   border-radius: .5rem;
   display: flex;
   justify-content: center;
@@ -236,8 +258,35 @@ onMounted(() => {
   right: 0%;
 }
 
-// .scroll-header {
-//   border-radius: 0 0 1rem 1rem;
-//   background-color: $body-color;
-//   box-shadow: 0 2px 4px hsla(0, 0, 1%, 1);
-// }</style>
+.nav__link-drop {
+  transition: .3s;
+
+  &::before {
+    content: "";
+    background: none;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  padding: .5rem 0 0 1rem;
+  position: relative;
+  background-color: none;
+  border-radius: .5rem;
+  transition: .3s;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  white-space: nowrap;
+  transition: .3s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}</style>

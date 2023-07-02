@@ -3,7 +3,7 @@
     <h1 class="title">Новости</h1>
     <div class="news-page__container page-container spacer" v-for="n in 5" :key="n">
       <div class="news-page__data">
-        <img src="@/assets/images/test.jpg" alt="">
+        <img src="@/assets/images/test2.jpg" alt="">
         <div class="news-page__description">
           <h1 class="text">Новость {{ n }}</h1>
           <p>
@@ -16,7 +16,7 @@
             renowned brands. They feature futuristic builds and designs with
             new and innovative platforms that last a long time.
           </p>
-          <router-link :to="`/detailNew/`+ n" class="button">больше</router-link>
+          <router-link :to="`/detailNew/`+ n" class="button">Подробнее</router-link>
         </div>
       </div>
     </div>

@@ -100,4 +100,5 @@ export default {
       transition: .3s;
     }
   }
-}</style>
+}
+</style>

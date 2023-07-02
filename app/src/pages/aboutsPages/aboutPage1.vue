@@ -1,12 +1,12 @@
 <template>
   <section class="about-page container">
-    <h1 class="title">О нас</h1>
+    <h1 class="title">Достижения</h1>
     <div
       v-for="n in 5" :key="n"
       class="page-container about-page__container border-left grid"
       >
       <div class="about-page__group">
-        <img src="@/assets/images/test.jpg" alt="" class="about-page__img">
+        <img src="@/assets/images/test2.jpg" alt="" class="about-page__img">
 
         <div class="about-page__card">
           <h3 class="about-page__card-title">2.500+</h3>
@@ -27,7 +27,7 @@
           new and innovative platforms that last a long time.
         </p>
 
-        <a href="#" class="button">больше</a>
+        <a href="#" class="button">Подробнее</a>
       </div>
     </div>
     <app-contacts />
@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import AppContacts from '../components/AppContacts.vue'
+import AppContacts from '../../components/AppContacts.vue'
 export default {
   components: {
     AppContacts
@@ -81,7 +81,6 @@ export default {
 .about-page {
 
   &__container {
-    padding: 1rem;
     margin-bottom: 2rem;
     transform: rotateY(2);
     &:nth-child(2n+1){

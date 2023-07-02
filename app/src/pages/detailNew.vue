@@ -3,7 +3,7 @@
     <div class="new-page__container page-container spacer border-left">
       <div class="new-page__data">
         <h1 class="title">Новость {{ state.id }}</h1>
-        <img src="@/assets/images/test.jpg" alt="">
+        <img src="@/assets/images/test2.jpg" alt="">
         <div class="new-page__description">
           <h1 class="text">Заголовок</h1>
           <p>

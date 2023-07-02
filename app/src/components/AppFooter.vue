@@ -18,7 +18,7 @@
         </h3>
 
         <ul class="footer__links" v-for="l of menuList" :key="l.id">
-          <li>
+          <li v-if="l.pages.length === 0">
             <router-link :to="l.path" class="footer__link">{{ l.title }}</router-link>
           </li>
         </ul>
@@ -109,7 +109,7 @@ import { menuList, menuClients } from '@/const/menuLinks'
     row-gap: 2.5rem;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   &__content {
     width: 300px;

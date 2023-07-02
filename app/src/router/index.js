@@ -8,10 +8,16 @@ const routes = [
     component: () => import('@/pages/homePage.vue')
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/aboutPage1',
+    name: 'aboutPage1',
     meta: { layout: 'main' },
-    component: () => import('@/pages/aboutPage.vue')
+    component: () => import('@/pages/aboutsPages/aboutPage1.vue')
+  },
+  {
+    path: '/aboutPage2',
+    name: 'aboutPage2',
+    meta: { layout: 'main' },
+    component: () => import('@/pages/aboutsPages/aboutPage2.vue')
   },
   {
     path: '/decisions',
@@ -20,10 +26,22 @@ const routes = [
     component: () => import('@/pages/decisionsPage.vue')
   },
   {
-    path: '/documents',
-    name: 'documents',
+    path: '/documents1',
+    name: 'documents1',
     meta: { layout: 'main' },
-    component: () => import('@/pages/documentsPage.vue')
+    component: () => import('@/pages/documentsPages/documentsPage1.vue')
+  },
+  {
+    path: '/documents2',
+    name: 'documents2',
+    meta: { layout: 'main' },
+    component: () => import('@/pages/documentsPages/documentsPage2.vue')
+  },
+  {
+    path: '/documents3',
+    name: 'documents3',
+    meta: { layout: 'main' },
+    component: () => import('@/pages/documentsPages/documentsPage3.vue')
   },
   {
     path: '/news',
