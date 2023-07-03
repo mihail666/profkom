@@ -2,6 +2,7 @@
   <section class="infoBoard">
     <div class="page-container border-left card">
       <div class="" v-for="n in 6" :key="n">
+        <router-link :to="`/detailNew/`+ n" class="">
         <div class="card__content">
           <h2 class="date subtitle">11.11.2023</h2>
           <img class="card-img" src="../assets/images/test2.jpg" alt="">
@@ -14,6 +15,7 @@
             </h1>
           </div>
         </div>
+      </router-link>
       </div>
     </div>
   </section>

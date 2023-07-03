@@ -9,6 +9,16 @@
             renowned brands. They feature futuristic builds and designs with
             new and innovative platforms that last a long time.
           </p>
+          <p class="decisions-page__description spacer">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
+          <p class="decisions-page__description">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
           <router-link :to="`/detailNew/`+ n" class="button">Подробнее</router-link>
       </div>
       <div class="decisions-page__content">
@@ -18,10 +28,11 @@
             renowned brands. They feature futuristic builds and designs with
             new and innovative platforms that last a long time.
           </p>
-          <router-link :to="`/detailNew/`+ n" class="button">Подробнее</router-link>
-      </div>
-      <div class="decisions-page__content">
-        <h1 class="title">Решение 3</h1>
+          <p class="decisions-page__description spacer">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
           <p class="decisions-page__description">
             See the future with high-performance electric cars produced by
             renowned brands. They feature futuristic builds and designs with
@@ -36,10 +47,49 @@
             renowned brands. They feature futuristic builds and designs with
             new and innovative platforms that last a long time.
           </p>
+          <p class="decisions-page__description spacer">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
+          <p class="decisions-page__description">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
           <router-link :to="`/detailNew/`+ n" class="button">Подробнее</router-link>
       </div>
       <div class="decisions-page__content">
         <h1 class="title">Решение 3</h1>
+          <p class="decisions-page__description">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
+          <p class="decisions-page__description spacer">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
+          <p class="decisions-page__description">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
+          <router-link :to="`/detailNew/`+ n" class="button">Подробнее</router-link>
+      </div>
+      <div class="decisions-page__content">
+        <h1 class="title">Решение 3</h1>
+          <p class="decisions-page__description">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
+          <p class="decisions-page__description spacer">
+            See the future with high-performance electric cars produced by
+            renowned brands. They feature futuristic builds and designs with
+            new and innovative platforms that last a long time.
+          </p>
           <p class="decisions-page__description">
             See the future with high-performance electric cars produced by
             renowned brands. They feature futuristic builds and designs with
